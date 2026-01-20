@@ -7,5 +7,12 @@ This project analyzes Zomato restaurant data using Power BI, focusing on data mo
 - Data Modeling
 - Interactive Dashboards
 ## 💰 Currency Conversion (USD)
-Avg Cost for Two (USD) =
-DIVIDE ( Zomato[Average_Cost_for_two], Zomato[Exchange_Rate] )
+Avg Cost for Two (USD) = DIVIDE ( Zomato[Average_Cost_for_two], Zomato[Exchange_Rate] )
+
+📊 Key Measures (DAX)
+## Total Restaurants
+Total Restaurants = COUNTROWS ( Zomato )
+## Restaurants by City & Country
+Restaurants Count = COUNT ( Zomato[RestaurantID] )
+
+
