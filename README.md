@@ -17,14 +17,28 @@ Restaurants Count = COUNT ( Zomato[RestaurantID] )
 ## ⭐ Ratings Analysis
 Restaurants by Rating = COUNT ( Zomato[Average_Rating] )
 ## 💵 Price Bucket Analysis
-Price Bucket =
-SWITCH (
-    TRUE (),
+Price Bucket =SWITCH (TRUE (),
+
     Zomato[Avg Cost for Two (USD)] <= 10, "Low",
+    
     Zomato[Avg Cost for Two (USD)] <= 30, "Medium",
+    
     Zomato[Avg Cost for Two (USD)] <= 60, "High",
+    
     "Premium"
 )
+## 📅 Restaurants Opened Over Time
+Restaurants Opened = COUNT ( Zomato[RestaurantID] )
+## 🍽️ Table Booking %
+Table Booking % = DIVIDE (CALCULATE ( COUNT ( Zomato[RestaurantID] ), Zomato[Has_Table_booking] = "Yes") ,COUNT ( Zomato[RestaurantID]))
+## 🚚 Online Delivery %
+Online Delivery % =
+DIVIDE (
+    CALCULATE ( COUNT ( Zomato[RestaurantID] ), Zomato[Has_Online_delivery] = "Yes" ),
+    COUNT ( Zomato[RestaurantID] )
+)
+
+
 
 
 
