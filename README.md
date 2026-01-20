@@ -37,8 +37,10 @@ DIVIDE (
     CALCULATE ( COUNT ( Zomato[RestaurantID] ), Zomato[Has_Online_delivery] = "Yes" ),
     COUNT ( Zomato[RestaurantID] )
 )
-
-
+## DASHBAORD
+| ![PowerBI DB](https://github.com/user-attachments/assets/490e8e34-0ce1-4462-bb40-6201a5d0aa06)
+## Conclusion
+This project demonstrates strong capabilities in Power BI, DAX, data modeling, and business intelligence. It transforms raw Zomato data into meaningful KPIs and interactive dashboards that support data-driven decision-making.
 
 
 
